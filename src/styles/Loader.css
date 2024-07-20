@@ -1,0 +1,33 @@
+/* src/components/Loader.css */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right,rgb(40, 3, 126), #6b3ec5);
+  }
+  
+  .loader img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .loader .line-loader {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 75%);
+    background-size: 200% 100%;
+    animation: lineLoader 1.5s infinite;
+  }
+  
+  @keyframes lineLoader {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  

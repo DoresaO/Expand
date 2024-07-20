@@ -1,0 +1,73 @@
+.image-text-container {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px; /* Add space from the sides of the page */
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  flex-direction: row-reverse; /* This will put the image on the right and text on the left */
+}
+
+.image {
+  max-width: 50%;
+  height: auto;
+  margin-left: 40px; /* Add space between image and text */
+  margin-right: 40px;
+}
+
+.text-container {
+  max-width: 500px; /* Ensure the text container doesn't get too long */
+  padding: 0 80px;
+  flex: 1; /* Allow the text container to take the remaining space */
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 1.8em;
+  text-transform: uppercase; 
+}
+
+.regular-text {
+  font-weight: normal;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .image-text-container {
+    flex-direction: column; /* Stack image on top and text underneath */
+    align-items: flex-start; /* Align items to the start */
+    padding: 0 20px; /* Reduce padding for smaller screens */
+  }
+
+  .image {
+    max-width: 100%; /* Image takes full width */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .text-container {
+    max-width: 100%; /* Text container takes full width */
+    padding: 0 20px; /* Reduce padding for smaller screens */
+  }
+
+  .bold-text {
+    font-size: 1.5em; /* Smaller font size for bold text */
+  }
+
+  .regular-text {
+    font-size: 1em; /* Smaller font size for regular text */
+  }
+}
+
+/* Media query for even smaller screens (phones) */
+@media (max-width: 480px) {
+  .bold-text {
+    font-size: 1.2em; /* Even smaller font size for bold text */
+  }
+
+  .regular-text {
+    font-size: 0.9em; /* Even smaller font size for regular text */
+  }
+}

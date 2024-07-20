@@ -1,0 +1,51 @@
+.company-slider-container {
+  background: linear-gradient(to bottom right,rgba(52, 10, 129, 0.87), #000000);
+  padding-top: 100px; /* Padding */
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.company-slider {
+  padding-top: 20px; /* Additional padding at the top of the slider */
+}
+
+.section-title,
+.section-subtitle {
+  color: white; /* Text color */
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 2.5em;
+}
+.section-title{
+  font-weight: bold;
+  font-size: 3.5em;
+  padding-bottom: 120px;
+}
+.section-subtitle {
+  padding-top: 140px;
+}
+
+.company-slider img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+ul.alice-carousel__dots {
+  display:none; /* Hide the dots */
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2em; /* Adjust font size */
+  }
+  .company-slider-container {
+    padding-top: 50px; /* Adjust padding */
+  }
+  .section-subtitle{
+    font-size: 1.7em;
+  }
+}

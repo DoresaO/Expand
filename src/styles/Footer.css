@@ -1,0 +1,163 @@
+/* Container for the entire footer component */
+.footer-container {
+  width: 100%;
+  background: linear-gradient(to bottom, #2b0745, #6b3ec5); /* Violet gradient */
+  color: white;
+  padding: 20px 0;
+  padding-top: 8%;
+}
+
+/* Map container styling */
+.location-map {
+  width: calc(100% - 300px); /* Adjust width to allow for margins */
+  height: 450px;
+  position: relative;
+  margin: 20px auto; /* Adds margin from top and sides */
+  background-color: white; /* Optional: to see the map bounds clearly */
+  margin-bottom: 5%;
+}
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Container for the footer content */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+/* Styling for each footer section */
+.footer-section {
+  flex: 1;
+  margin: 0 10px; /* Adjusted margin */
+  text-align: center; /* Center align all sections */
+}
+
+.footer-section.left {
+  order: 1; /* Ensure left section is first */
+}
+
+.footer-section.center {
+  order: 2; /* Center section is second */
+}
+
+.footer-section.right {
+  order: 3; /* Right section is third */
+}
+
+/* Styling for the logo and expand text container */
+.logo-expand-container {
+  display: flex;
+  align-items: left;
+  margin-bottom: 80px;
+}
+.footer-logo-title {
+  text-align: left;
+  font-size: 1.2em;
+}
+.logo {
+  width: 50px; /* Adjust the width of the logo */
+}
+
+.expand-text {
+  font-size: 27px;
+  color: white;
+  margin-left: 11px;
+}
+
+/* Container for social media icons */
+.social-media {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
+
+/* Styling for the footer title and text */
+h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left; /* Center align all headings */
+}
+
+p {
+  margin: 11px 0;
+  text-align: left; /* Center align all paragraphs */
+}
+
+p.lastp {
+  margin-top: 20px; /* Adjusted margin */
+  text-align: left; /* Center align last paragraph */
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 180px;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+  .location-map {
+    width: calc(100% - 100px); /* Adjust width for tablets */
+    margin: 20px auto; /* Adjust margins */
+    height: 400px; /* Adjust height for tablets */
+  }
+  
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align all sections */
+    padding-left: 9%;
+  }
+  
+  p.lastp {
+    margin-left: 9%; /* Reset margin */
+  }
+  
+  .footer-section {
+    width: 100%;
+    margin: 20px 0; /* Adjusted margin */
+  }
+  
+  .footer-section.left,
+  .footer-section.center,
+  .footer-section.right {
+    order: unset; /* Reset order for stacking */
+  }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 600px) {
+  .location-map {
+    width: calc(100% - 40px); /* Adjust width for phones */
+    height: 300px; /* Adjust height for smaller screens */
+    margin: 20px auto; /* Adjust margins */
+  }
+  
+  .footer-section {
+    margin: 10px 0; /* Further reduced margin */
+  }
+  
+  .footer-container {
+    padding: 10px 0; /* Adjusted padding */
+  }
+  
+  p.lastp {
+    font-size: 1em;
+  }
+}

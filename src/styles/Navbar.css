@@ -1,0 +1,65 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Original padding */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 20000;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.navbar.transparent {
+  background-color: transparent;
+  backdrop-filter: none;
+}
+
+.navbar.opaque {
+  background-color: rgba(93, 95, 120, 0.6); /* Adjusted rgba value */
+  backdrop-filter: blur(10px); /* Adjusted blur effect */
+}
+
+
+.navbar-item {
+  color: white;
+  cursor: pointer;
+  font-size: 25px; /* Original font size */
+  padding: 0 15px; /* Original padding */
+  text-decoration: none; /* Remove underline from text links */
+}
+
+.navbar-item a {
+  color: inherit; /* Inherit color from .navbar-item */
+  text-decoration: none; /* Ensure links don't have underline */
+}
+
+.navbar-logo {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar.opaque .navbar-logo {
+  opacity: 1;
+}
+
+.navbar-logo img {
+  height: 60px; /* Original height */
+}
+
+/* Responsive styles for phones */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 20px; /* Reduced padding */
+  }
+  
+  .navbar-item {
+    font-size: 18px; /* Reduced font size */
+    padding: 0 10px; /* Reduced padding */
+  }
+
+  .navbar-logo img {
+    height: 40px; /* Reduced height */
+  }
+}

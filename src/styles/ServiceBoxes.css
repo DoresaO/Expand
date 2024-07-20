@@ -1,0 +1,66 @@
+.service-boxes {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  color: black;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.service-box {
+  background: white; /* Ensure it matches the background */
+  border: none; /* Remove borders */
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 30%; /* Ensure boxes take up one-third of the container width */
+  min-width: 250px; /* Ensure minimum width for responsiveness */
+}
+
+.service-box h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: black;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(48, 3, 153);
+  border-radius: 50%;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.service-box p {
+  margin-top: 10px;
+  margin-left: 30px; /* Indent to align under the circle and title */
+}
+
+
+.show-more {
+  display: block;
+  text-align: center;
+  margin-top: 20px; /* Space above the link */
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(48, 3, 153);
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+.show-more:hover {
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .circle{
+    width: 25px;
+  }
+}

@@ -1,0 +1,134 @@
+/* Container for the entire Social component */
+.social-container {
+  text-align: center;
+  padding: 5%;
+  background: linear-gradient(to bottom right, #7d16c6, #000000); /* Gradient background */
+  margin-bottom: 50px;
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+ 
+}
+
+/* Styling for the title */
+.social-title {
+  font-size: 6.5em; /* Main font size */
+  color: rgb(248, 226, 248); /* Violet text color */
+  margin-bottom: 80px; /* Space between title and images */
+  margin-top: 100px; /* Space above title */
+}
+
+/* Container for the row of images */
+.social-images-row {
+  display: flex;
+  justify-content: space-between; /* Space evenly between images */
+  gap: 30px; /* Space between the images */
+}
+
+/* Styling for each image */
+.social-image {
+  width: 300px; /* Adjust the size of the images as needed */
+  height: 250px;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s; /* Smooth transition for the hover effect */
+  margin-bottom: 100px; /* Bottom margin */
+  margin-top: 50px; /* Top margin */
+}
+
+/* Hover effect for the images */
+.social-image:hover {
+  transform: translateY(-18px); /* Slightly rise the image on hover */
+}
+span.outline-text {
+  font-size: 1em;
+  color: transparent; /* Makes the text itself transparent */
+  -webkit-text-stroke-width: 1px; /* Defines the width of the stroke */
+  -webkit-text-stroke-color: white; /* Defines the color of the stroke */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 6ch; /* Increase the width to ensure the entire text is visible */
+  height: 1em; /* Maintain height to prevent vertical movement */
+  line-height: 0.69em; /* Align text vertically */
+  vertical-align: bottom; /* Ensure proper vertical alignment */
+  animation: outline-text-animation 10s infinite; /* Animation for appearing and disappearing */
+}
+
+@keyframes outline-text-animation {
+  0%, 25%, 75%, 100% {
+      width: 6ch; /* Maintain space for 6 characters */
+  }
+  10%, 90% {
+      width: 0; /* Text is hidden */
+  }
+}
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1300px) {
+   .social-container{
+    padding-right:5% ;
+    padding-bottom: 5%;
+  }
+   
+  .social-title {
+      font-size: 5em; /* Adjust font size for smaller screens */
+      margin-bottom: 60px; /* Adjust margin */
+      margin-top: 80px; /* Adjust margin */
+  }
+
+  .social-images-row {
+      justify-content: center; /* Center images on smaller screens */
+      flex-wrap: wrap; /* Allow images to wrap */
+      gap: 20px; /* Reduced space between images */
+      margin-left: auto; /* Center images */
+      margin-right: auto; /* Center images */
+      max-width: 800px; /* Adjust max-width as needed */
+      padding: 0 20px; /* Padding for smaller screens */
+  }
+
+  .social-image {
+      width: 100%; /* Take full width of the container */
+      max-width: 300px; /* Max width of each image */
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 30px; /* Space between images */
+      margin-top: 20px; /* Space between images */
+  }
+}
+
+@media (max-width: 768px) {
+  .social-container{
+    padding-right:5% ;
+    padding-bottom: 5%;
+  }
+   
+  .social-title {
+      font-size: 4em; /* Adjust font size for smaller screens */
+      margin-bottom: 40px; /* Adjust margin */
+      margin-top: 60px; /* Adjust margin */
+  }
+
+  .social-images-row {
+      gap: 15px; /* Reduced space between images */
+  }
+
+  .social-image {
+      max-width: 250px; /* Max width of each image */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-title {
+      font-size: 2em; /* Adjust font size for smaller screens */
+      margin-bottom: 30px; /* Adjust margin */
+      margin-top: 40px; /* Adjust margin */
+  }
+
+  .social-images-row {
+      justify-content: center; /* Center images on smaller screens */
+  }
+
+  .social-image {
+      max-width: 200px; /* Max width of each image */
+  }
+}

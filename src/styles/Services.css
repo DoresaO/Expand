@@ -1,0 +1,159 @@
+/* Base styles for desktop */
+.services {
+  padding: 80px;
+  background: linear-gradient(to right, #47086be8, #000000);
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.services-title {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 400;
+}
+
+span {
+  font-weight: bold;
+}
+
+.back-button1 {
+  position: absolute;
+  left: 0;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.back-button1 .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-left: 7px;
+  width: 2px;
+}
+
+.service {
+  margin-bottom: 20px;
+}
+
+.service h2 {
+  font-size: 35px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  padding-left: 25px;
+  font-weight: 400;
+}
+
+.service p {
+  font-size: 25px;
+  margin: 10px 0 20px 0;
+  padding-left: 25px;
+  color: rgba(183, 181, 181, 0.814);
+  width: 70%;
+
+}
+
+.service-button {
+  background: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  margin-left: 95%;
+  border-color: transparent;
+}
+
+.service-divider {
+  border: 1px solid white;
+  margin: 40px 0;
+}
+
+.services-box {
+  padding-left: 100px;
+  padding-right: 120px;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .services {
+    padding: 40px;
+  }
+
+  .services-title {
+    font-size: 35px;
+  }
+
+  .back-button1 {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .service h2 {
+    font-size: 28px;
+    padding-left: 20px;
+  }
+
+  .service p {
+    font-size: 20px;
+    padding-left: 20px;
+  }
+
+  .service-button {
+    font-size: 30px;
+    margin-left: 90%;
+  }
+
+  .services-box {
+    padding-left: 50px;
+    padding-right: 60px;
+  }
+}
+
+/* Phone styles */
+@media (max-width: 480px) {
+  .services {
+    padding: 20px;
+  }
+
+  .services-title {
+    font-size: 25px;
+  }
+
+  .back-button1 {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  .service h2 {
+    font-size: 22px;
+    padding-left: 15px;
+  }
+
+  .service p {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  .service-button {
+    font-size: 25px;
+    margin-left: 85%;
+  }
+
+  .services-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

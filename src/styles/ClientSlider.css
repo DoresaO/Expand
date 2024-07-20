@@ -1,0 +1,129 @@
+/* Container for the entire client slider component */
+.client-slider-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+/* Big title for the client slider component */
+.big-title1 {
+  font-size: 2.5em;
+  margin-bottom: 40px; /* Add space below the big title */
+  color: black;
+}
+
+/* Container for the slider itself */
+.slider {
+  position: relative;
+  background: white;
+  padding: 20px;
+  min-height: 200px; /* Adjust this height based on the tallest slide content */
+  overflow: hidden; /* Hide overflow to prevent content from affecting layout */
+}
+
+/* Header for the slider containing slide number and arrows */
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+/* Slide number display */
+.slide-number {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+/* Container for the arrow buttons */
+.slider-arrows button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Styling for individual slides */
+.slide {
+  margin-top: 20px;
+}
+
+.slide-content {
+  text-align: left;
+}
+
+/* Company name styling */
+.company-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Separator line */
+.separator {
+  width: 100%;
+  height: 1px;
+  background: black;
+  margin: 10px 0;
+}
+
+/* Company work description styling */
+.company-work {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Comment styling */
+.comment {
+  font-size: 2em;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 150px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive styles for phones */
+@media (max-width: 600px) {
+  .client-slider-container {
+    padding: 20px;
+    width: 85%;
+  }
+
+  .big-title1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .slider-header {
+    margin-bottom: 50px;
+  }
+
+  .slide-number {
+    font-size: 1.2em;
+  }
+
+  .slider-arrows button {
+    font-size: 1.2em;
+  }
+
+  .slide {
+    margin-top: 10px;
+  }
+
+  .company-name {
+    font-size: 1.2em;
+  }
+
+  .company-work {
+    font-size: 1em;
+  }
+
+  .comment {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}

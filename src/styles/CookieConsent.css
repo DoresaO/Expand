@@ -1,0 +1,54 @@
+.cookie-consent {
+  position: fixed;
+  bottom: 50px; /* Adjust this value to move the consent bar higher */
+  left: 0;
+  width: 98%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  border-top: 1px solid #ccc;
+  z-index: 1000; /* Ensure it is on top of other components */
+}
+
+.cookie-consent p {
+  margin: 0;
+  font-weight: bold; /* Make the text bolder */
+  flex: 1; /* Allow text to take up available space */
+  text-align: center; /* Center the text */
+}
+
+.cookie-consent .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-consent button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold; /* Make the button text bolder */
+}
+
+.cookie-consent .accept {
+  background-color: rgb(48, 3, 153);
+  color: white;
+}
+
+.cookie-consent .read-more {
+  background-color: white;
+  color: rgb(55, 7, 55);
+  border: 1px solid rgb(82, 14, 82);
+}
+
+.cookie-consent .read-more:hover {
+  background-color: rgba(238, 130, 238, 0.1);
+}
+
+.cookie-consent .accept:hover {
+  background-color: rgb(64, 13, 85);
+}

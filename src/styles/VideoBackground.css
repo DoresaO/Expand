@@ -1,0 +1,177 @@
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.laptop-image {
+  position: absolute;
+  top: 50%; 
+  left: 49.8%; 
+  transform: translate(-50%, -50%); 
+  width: 55%; 
+  z-index: 2; 
+}
+
+.foreground-video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 39%; 
+  height: 54%;
+  z-index: 3; 
+  cursor: pointer;
+  clip-path: inset(0% 2% 0% 2%); /* Adjust the clipping path as needed */
+}
+
+.foreground-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none; 
+}
+
+.foreground-video-container:focus-within .foreground-video {
+  pointer-events: auto; 
+}
+
+/* Responsive adjustments */
+
+/* Large Desktops */
+@media (max-width: 1600px) {
+  .laptop-image {
+    width: 54%; /* Adjust width for larger screens */
+  }
+  .foreground-video-container {
+    width: 40%; /* Adjust width for larger screens */
+    height: 54%; /* Adjust height for larger screens */
+  }
+}
+
+/* Desktops */
+@media (max-width: 1400px) {
+  .laptop-image {
+    width: 54%; /* Keep the same size */
+  }
+  .foreground-video-container {
+    width: 40%; /* Keep the same size */
+    height: 49%; /* Keep the same size */
+  }
+}
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+  .laptop-image {
+    width: 60%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 43%; /* Adjust width for smaller screens */
+    height: 45%; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .laptop-image {
+    width: 60%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 43%; /* Adjust width for smaller screens */
+    height: 47%; /* Adjust height for smaller screens */
+  }
+}
+@media (max-width: 992px) {
+  .laptop-image {
+    width: 65%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 48%; /* Adjust width for smaller screens */
+    height: 40%; /* Adjust height for smaller screens */
+  }
+}
+@media (max-width: 892px) {
+  .laptop-image {
+    width: 65%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 48%; /* Adjust width for smaller screens */
+    height: 34%; /* Adjust height for smaller screens */
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .laptop-image {
+    width: 69%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 51%; /* Adjust width for smaller screens */
+    height: 34%; /* Adjust height for smaller screens */
+  }
+}
+
+/* Small Tablets and Large Phones */
+@media (max-width: 576px) {
+  .laptop-image {
+    width: 73%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 54%; /* Adjust width for smaller screens */
+    height: 26%; /* Adjust height for smaller screens */
+  }
+}
+
+/* Large Phones */
+@media (max-width: 480px) {
+  .laptop-image {
+    width: 78%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 61%; /* Adjust width for smaller screens */
+    height: 22%; /* Adjust height for smaller screens */
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  .laptop-image {
+    width: 85%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 63%;
+    height: 24%;
+    margin-left: 0.8%;
+}
+}
+
+@media (max-width: 360px) {
+  .laptop-image {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 65%; /* Adjust width for smaller screens */
+    height: 18%; /* Adjust height for smaller screens */
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 320px) {
+  .laptop-image {
+    width: 95%; /* Adjust width for smaller screens */
+  }
+  .foreground-video-container {
+    width: 70%; /* Adjust width for smaller screens */
+    height: 15%; /* Adjust height for smaller screens */
+  }
+}

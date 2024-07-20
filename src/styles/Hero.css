@@ -1,0 +1,183 @@
+.hero {
+  position: relative;
+  width: 99.99vw;
+  height: 99.99vh;
+  overflow: hidden;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(48, 3, 153), rgba(33, 11, 33, 0.5)); /* Violet gradient */
+  opacity: 0;
+  z-index: 0; /* Ensure it is below the logo and text */
+  animation: gradient-animation 2s ease-in-out forwards;
+}
+
+.animated-logo {
+  position: absolute;
+  top: -100%; /* Start logo off-screen (above) */
+  left: 50%; /* Center logo horizontally */
+  transform: translateX(-50%); /* Center logo horizontally with transform */
+  width: 10vw; /* Adjusted for responsiveness */
+  max-width: 150px; /* Maximum size */
+  z-index: 1; /* Ensure it is above the background and overlay */
+  animation: logo-animation 3s ease-in-out forwards; /* Define animation */
+}
+
+.animated-logo.scrolled-logo {
+  animation: logo-scroll-up 2s forwards; /* Make the logo scroll up slower */
+}
+
+.text-content {
+  position: absolute;
+  top: 50%; /* Adjust this to position the initial text lower */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4vw; /* Adjusted for responsiveness */
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  z-index: 2; /* Ensure it is above the overlay */
+  animation: text-animation 3s ease-in-out forwards; /* Define text animation */
+  animation-delay: 2s; /* Delay to sync with logo animation */
+}
+
+.text-content.scrolled-text {
+  top: 30%;
+}
+
+.text-content span {
+  font-weight: bold;
+}
+
+.new-text {
+  font-weight: bold;
+  position: absolute;
+  top: 50%; /* Adjust this to position the new text closer to the logo initially */
+  left: 54%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw; /* Adjusted for responsiveness */
+  color: white;
+  opacity: 0; /* Initially hidden */
+  z-index: 2;
+  animation: new-text-animation 2s ease-in-out forwards;
+  animation-delay: 0.1s; /* Ensure the new text appears smoothly */
+  margin-left: 0; /* Removed margin-left to center text */
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 5vh; /* Adjusted for responsiveness */
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.mouse-icon {
+  width: 2.4vw; /* Adjusted for responsiveness */
+  height: 4.4vw; /* Adjusted for responsiveness */
+  max-width: 24px; /* Maximum size */
+  max-height: 44px; /* Maximum size */
+  border: 2px solid white;
+  border-radius: 14px;
+  position: relative;
+}
+
+.mouse-wheel {
+  width: 0.4vw; /* Adjusted for responsiveness */
+  height: 0.8vw; /* Adjusted for responsiveness */
+  max-width: 4px; /* Maximum size */
+  max-height: 8px; /* Maximum size */
+  background-color: white;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 1s infinite alternate;
+}
+
+@keyframes scroll {
+  from {
+    opacity: 1;
+    top: 8px;
+  }
+  to {
+    opacity: 0;
+    top: 16px;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    top: -100%;
+    width: 10vw;
+    background-color: transparent;
+  }
+  50% {
+    top: 50%;
+    width: 20vw;
+  }
+  75% {
+    top: 50%;
+    width: 15vw;
+  }
+  100% {
+    top: 20%;
+    width: 15vw;
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes new-text-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-scroll-up {
+  to {
+    top: -100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-content {
+    font-size: 6vw; /* Increase font size for smaller screens */
+    top: 45%;
+  }
+
+  .new-text {
+    font-size: 5.6vw; /* Increase font size for smaller screens */
+    top: 45%;
+  }
+
+  .mouse-icon , .mouse-wheel{
+    display: none; /* Hide the scroll indicator on smaller screens */
+  
+}}

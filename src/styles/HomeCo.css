@@ -1,0 +1,160 @@
+/* HomeCo.css */
+
+.homeco-container {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 10%;
+  padding-top: 12%;
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Smooth fade-in for the container */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.homeco-container .vertical-line {
+  width: 2px;
+  height: 0; /* Initially hidden */
+  background-color: #000000;
+  position: absolute;
+  left: 8.2%; /* Adjust margin as needed */
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  animation: showLine 1s forwards; /* Smooth reveal for the line */
+}
+
+@keyframes showLine {
+  to {
+    height: 91%; /* Final height */
+  }
+}
+
+.homeco-container .title-container {
+  max-width: 15%;
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 10%;
+  text-align: left;
+}
+
+.homeco-container .rebranding-title {
+  font-size: 18px;
+  color: gray;
+}
+
+.homeco-container .homeco-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.homeco-container .content-container {
+  margin-left: 15%; /* Adjust as needed */
+  padding-left: 20px;
+}
+
+.homeco-container .image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homeco-container img {
+  max-width: 70%;
+  max-height: 100%;
+  margin-left: 20%;
+}
+
+.homeco-container video {
+  max-width: 70%;
+  height: auto;
+  filter: saturate(1.1);
+  margin-left: 20%;
+}
+
+@media (max-width: 768px) {
+  .homeco-container {
+    padding-top: 25%;
+  }
+
+  .homeco-container .vertical-line {
+    left: 5%; /* Adjust position for tablet view */
+    animation: showLineTablet 1s forwards;
+  }
+
+  @keyframes showLineTablet {
+    to {
+      height: 85%; /* Final height for tablet view */
+    }
+  }
+
+  .homeco-container .title-container {
+    max-width: 20%;
+    left: 35px;
+    top: 80px;
+    padding-top: 20px;
+  }
+
+  .homeco-container .homeco-title {
+    font-size: 28px;
+  }
+
+  .homeco-container .content-container {
+    margin-left: 10%; /* Adjust as needed for tablet view */
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeco-container {
+    padding-top: 60%;
+    margin-top: 5%;
+  }
+  .homeco-container .vertical-line {
+    left: 5%; /* Adjust position for phone view */
+    animation: showLinePhone 1s forwards;
+  }
+
+  @keyframes showLinePhone {
+    to {
+      height: 83%; /* Final height for phone view */
+    }
+  }
+
+  .homeco-container .title-container {
+    max-width: 20%;
+    left:17px;
+    top: 40px;
+    padding-top: 20px;
+  }
+  .homeco-container .homeco-title {
+    font-size: 20px;
+  }
+
+  .homeco-container .content-container {
+    margin-left: 5%; /* Adjust as needed for phone view */
+    padding-left: 10px;
+  }
+
+  .homeco-container .image-item,
+  .homeco-container .video-item {
+    width: 100%; /* Full width on smaller screens */
+    padding-left: 5%; 
+  }
+
+  .homeco-container img,
+  .homeco-container video {
+    max-width: 90%; /* Adjust for better fit on phone screens */
+    margin-left: 5%;
+  }
+}
